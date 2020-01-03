@@ -1,5 +1,5 @@
 import * as rp from 'request-promise';
-import { APISite } from '../option';
+import { APISite } from './option';
 import { SiteRequest } from '../interface/SiteRequest.interface';
 
 export const requestService = async (qs: SiteRequest) => {

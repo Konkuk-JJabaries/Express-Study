@@ -13,12 +13,15 @@ $ npm install
 
 <br></br>
 
-express 로 11번가를 호출하는 방법은 아래외 같습니다.
+express 로 11번가를 호출하는 방법은 아래와 같습니다.
+
+> express로 호출을 하는 것을 테스트 할 때에는 11st 를 실행시킬 필요가 없습니다! 윗 과정은 필요없습니다!!
 
 ```zsh
-$ cd express-test
-$ npm install
-$ npm start
+$ cd 11st 
+$ npm install & npm run build
+$ cd ../express-test
+$ npm install & npm start
 ```
 
 이 후, 차례대로 하면 실행되는 것을 확인할 수 있습니다.

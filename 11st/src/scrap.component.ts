@@ -1,4 +1,4 @@
-import { APIkey } from '../option';
+import { APIkey } from './option';
 import { requestService } from './request.service';
 import * as iconv from 'iconv-lite';
 import { parseStringPromise } from 'xml2js';

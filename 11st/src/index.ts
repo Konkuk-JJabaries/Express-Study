@@ -1,4 +1,4 @@
-import { scrapComponent } from './src/scrap.component';
+import { scrapComponent } from './scrap.component';
 
 export const index = (keyword: string) => {
   return scrapComponent(keyword)
