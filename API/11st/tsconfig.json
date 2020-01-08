@@ -1,7 +1,13 @@
 {
-    "extends": "../tsconfig.json",
     "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "declaration": false,
+        "noImplicitAny": true,
+        "allowJs": true,
+        "removeComments": true,
         "outDir": "./dist"
     },
-    "include": ["src"]
+    "exclude": ["node_modules"]
 }
