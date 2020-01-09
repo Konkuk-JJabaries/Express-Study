@@ -19,11 +19,11 @@ express 로 11번가를 호출하는 방법은 아래와 같습니다.
 
 ```zsh
 $ cd API/11st
-$ npm install & npm run build   # 11번가 API 빌드
+$ npm install && npm run build   # 11번가 API 빌드
 $ cd ../joongna
-$ npm install & npm run build   # 중고나라 API 빌드
+$ npm install && npm run build   # 중고나라 API 빌드
 $ cd ../../express-for-typescript
-$ npm install & npm run build & npm start  # Express 빌드 및 실행
+$ npm install && npm run build && npm start  # Express 빌드 및 실행
 ```
 
 이 후, 차례대로 하면 실행되는 것을 확인할 수 있습니다.
