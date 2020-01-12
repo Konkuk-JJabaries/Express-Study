@@ -2,6 +2,8 @@ import { NextFunction, Request, Response, Router } from 'express';
 import * as path from 'path';
 import { callApp } from './callApp.service';
 import * as mysql from 'mysql';
+import { ProductResponse } from './Interface/productResponse.interface';
+import { getData, updateData } from '../database/connect.service';
 
 const productBase = Router();
 
@@ -18,8 +20,15 @@ productBase.get('/search', async (req: Request, res: Response, next: NextFunctio
     if (!req.query.title) {
         return res.send('Error!! There is no Query String');
     }
-    const result = await callApp(req.query);
-    return res.status(200).json(result);
+    //const result = await callApp(req.query);
+    const db_result = getData(req.query.title);
+    console.log(db_result);
+    return res.status(200).json(db_result);
+
+    /*for (var i = 0; i < result[1].length; i++) {
+        updateData(result[1][i]);
+    }*/
+    //return res.status(200).json(result);
 });
 
 export default productBase;

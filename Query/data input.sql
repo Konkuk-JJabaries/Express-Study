@@ -1,3 +1,5 @@
+use KJ_test;
+
 desc item_info;
 
 alter table item_info convert to charset utf8;
