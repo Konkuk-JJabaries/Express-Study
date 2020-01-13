@@ -35,6 +35,8 @@ origin_url varchar(100),
 etc varchar(50)
 );
 alter table joongnatest modify images varchar(200);
+alter table joongnatest drop primary key;
+alter table joongnatest add id int not null auto_increment primary key ;
 
 create table ProductList (
 	id varchar(24) not null,

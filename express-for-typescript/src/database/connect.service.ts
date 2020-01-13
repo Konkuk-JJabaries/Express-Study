@@ -15,18 +15,18 @@ export interface dataObj {
 };
 
 export const getData = (keyWord: string) => {
-    connect.query("select * from joongnatest where name like ?", ['%' + keyWord + '%'], (err, data) => {
-        if (err) {
-            throw err;
-        }
-        //console.log(data);    -- 정상적으로 data 출력됨.
-        
-        return data;
+    return new Promise((resolve, reject) => {
+        const a = connect.query("select * from joongnatest where name like ?", ['%' + keyWord + '%'], (err, data) => {
+            if (err) {
+                reject(err);
+            }
+            resolve(data);
+        });
     });
 };
 
 export const updateData = (keyword: dataObj) => {
-    connect.query('insert ignore into joongnatest values(?, ?, ?, ?, ?, ?, ?)', [keyword.site, keyword.name, keyword.price, keyword.images[0], keyword.detail, keyword.origin_url, keyword.etc], (err, data) => {
+    connect.query('insert ignore into joongnatest(site, name, price, images, detail, origin_url, etc) values(?, ?, ?, ?, ?, ?, ?)', [keyword.site, keyword.name, keyword.price, keyword.images[0], keyword.detail, keyword.origin_url, keyword.etc], (err, data) => {
         if (err) {
             data = 'Fail';
             throw err;
