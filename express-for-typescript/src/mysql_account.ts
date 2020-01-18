@@ -1,6 +1,6 @@
 export const mysql_account: Record<string, string> = {
-    host: 'localhost',
-    user: 'root',
-    password: '123456',
-    database: 'kj'
+    host: 'database-1.csdj22cdlzis.us-east-2.rds.amazonaws.com',
+    user: 'admin',
+    password: 'jjabaries',
+    database: 'joongna_test'
 };

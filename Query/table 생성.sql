@@ -1,5 +1,5 @@
 show databases;
-use kj;
+use joongna_test;
 -- create table item_info;
 -- drop table testdb;
 show tables;
@@ -25,18 +25,22 @@ alter table item_info modify images varchar(200);
 -- 11번가: siteName, productName, price, seller, images, rating, commentNum, productLink
 -- 중고나라: site, name, price, images, detail, origin_url, etc
 
+drop table joongnatest;
 create table joongnatest (
+id int not null auto_increment primary key,
 site varchar(20) not null,
-name varchar(50) not null primary key,
+name varchar(50) not null,
 price int,
-images varchar(100),
+images varchar(200),
 detail varchar(200),
 origin_url varchar(100),
 etc varchar(50)
 );
 alter table joongnatest modify images varchar(200);
 alter table joongnatest drop primary key;
-alter table joongnatest add id int not null auto_increment primary key ;
+alter table joongnatest add id int not null auto_increment primary key;
+alter table joongnatest convert to charset utf8;
+desc joongnatest;
 
 create table ProductList (
 	id varchar(24) not null,

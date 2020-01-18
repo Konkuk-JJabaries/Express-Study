@@ -1,6 +1,6 @@
 show databases;
-drop database test;
+-- drop database test;
 show databases;
 
-create database KJ_test;
+create database joongna_test;
 alter user 'KJ_test'@'%' identified by 'pass';
