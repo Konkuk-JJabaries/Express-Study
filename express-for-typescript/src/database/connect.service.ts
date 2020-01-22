@@ -26,7 +26,7 @@ export const getData = (keyWord: string) => {
 };
 
 export const updateData = (keyword: dataObj) => {
-    connect.query('insert ignore into joongnatest(site, name, price, images, detail, origin_url, etc) values(?, ?, ?, ?, ?, ?, ?)', [keyword.site, keyword.name, keyword.price, keyword.images[0], keyword.detail, keyword.origin_url, keyword.etc], (err, data) => {
+    connect.query('insert into joongnatest(site, name, price, images, detail, origin_url, etc) values(?, ?, ?, ?, ?, ?, ?)', [keyword.site, keyword.name, keyword.price, keyword.images[0], keyword.detail, keyword.origin_url, keyword.etc], (err, data) => {
         if (err) {
             data = 'Fail';
             throw err;
